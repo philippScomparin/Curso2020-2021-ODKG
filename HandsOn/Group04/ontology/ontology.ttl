@@ -12,7 +12,31 @@
 #    Object Properties
 #################################################################
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasItem
+###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasAcquisitionType
+:hasAcquisitionType rdf:type owl:ObjectProperty ;
+                    rdfs:domain :subAcquisitionType ;
+                    rdfs:range :subAcquisitionType .
+
+
+###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasAquisitionMethod
+:hasAquisitionMethod rdf:type owl:ObjectProperty ;
+                     rdfs:domain :subAcquisitionMethod ;
+                     rdfs:range :AcquisitionMethod .
+
+
+###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasFamily
+:hasFamily rdf:type owl:ObjectProperty ;
+           rdfs:domain :ItemClass ;
+           rdfs:range :Family .
+
+
+###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasSegment
+:hasSegment rdf:type owl:ObjectProperty ;
+            rdfs:domain :Family ;
+            rdfs:range :Segment .
+
+
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasItem
 :hasItem rdf:type owl:ObjectProperty ;
          rdfs:domain :Purchase ;
          rdfs:range :Item .
@@ -27,13 +51,13 @@
 ###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasSubAcquisitionMethod
 :hasSubAcquisitionMethod rdf:type owl:ObjectProperty ;
                          rdfs:domain :Purchase ;
-                         rdfs:range :SubAcquisitionMethod .
+                         rdfs:range :subAcquisitionMethod .
 
 
 ###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasSubAcquisitionType
 :hasSubAcquisitionType rdf:type owl:ObjectProperty ;
                        rdfs:domain :Purchase ;
-                       rdfs:range :SubAcquisitionType .
+                       rdfs:range :subAcquisitionType .
 
 
 ###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasSupplier
@@ -52,122 +76,122 @@
 #    Data properties
 #################################################################
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasCalCards
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasCalCards
 :hasCalCards rdf:type owl:DatatypeProperty ;
              rdfs:domain :Purchase ;
              rdfs:range xsd:boolean .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasCommodityTitle
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasCommodityTitle
 :hasCommodityTitle rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Item ;
                    rdfs:range xsd:string .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasCreationDate
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasCreationDate
 :hasCreationDate rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Purchase ;
                  rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasDepartmentName
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasDepartmentName
 :hasDepartmentName rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Department ;
                    rdfs:range xsd:string .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasDescription
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasDescription
 :hasDescription rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Item ;
                 rdfs:range xsd:string .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasFiscalYear
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasFiscalYear
 :hasFiscalYear rdf:type owl:DatatypeProperty ;
                rdfs:domain :Purchase ;
                rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasItemName
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasItemName
 :hasItemName rdf:type owl:DatatypeProperty ;
              rdfs:domain :Item ;
              rdfs:range xsd:string .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasLPAnumber
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasLPAnumber
 :hasLPAnumber rdf:type owl:DatatypeProperty ;
               rdfs:domain :Purchase ;
               rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasLattitude
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasLattitude
 :hasLattitude rdf:type owl:DatatypeProperty ;
               rdfs:domain :Supplier ;
               rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasLongitude
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasLongitude
 :hasLongitude rdf:type owl:DatatypeProperty ;
               rdfs:domain :Supplier ;
               rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasOrderNumber
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasOrderNumber
 :hasOrderNumber rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Purchase ;
                 rdfs:range xsd:long .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasPurchaseDate
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasPurchaseDate
 :hasPurchaseDate rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Purchase ;
                  rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasQualifications
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasQualifications
 :hasQualifications rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Supplier ;
                    rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasQuantity
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasQuantity
 :hasQuantity rdf:type owl:DatatypeProperty ;
              rdfs:domain :Purchase ;
              rdfs:range rdf:PlainLiteral ,
                         owl:real .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasRecquisitionNumber
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasRecquisitionNumber
 :hasRecquisitionNumber rdf:type owl:DatatypeProperty ;
                        rdfs:domain :Purchase ;
                        rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasSupplierCode
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasSupplierCode
 :hasSupplierCode rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Supplier ;
                  rdfs:range rdf:PlainLiteral .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasTitle
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasTitle
 :hasTitle rdf:type owl:DatatypeProperty ;
           rdfs:domain :Segment ;
           rdfs:range xsd:string .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasUNSPC
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasUNSPC
 :hasUNSPC rdf:type owl:DatatypeProperty ;
           rdfs:domain :Item ;
           rdfs:range xsd:long .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasUnitPrice
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasUnitPrice
 :hasUnitPrice rdf:type owl:DatatypeProperty ;
               rdfs:domain :Purchase ;
               rdfs:range owl:real .
 
 
-###  http://exercise.publicprocurement.es/about/ontology/group04pp#hasZipCode
+###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#hasZipCode
 :hasZipCode rdf:type owl:DatatypeProperty ;
             rdfs:domain :Supplier ;
             rdfs:range xsd:string .
@@ -176,6 +200,22 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://exercise.publicprocurement.es/about/ontology/group04pp#Family
+:Family rdf:type owl:Class .
+
+
+###  http://exercise.publicprocurement.es/about/ontology/group04pp#ItemClass
+:ItemClass rdf:type owl:Class .
+
+
+###  http://exercise.publicprocurement.es/about/ontology/group04pp#subAcquisitionMethod
+:subAcquisitionMethod rdf:type owl:Class .
+
+
+###  http://exercise.publicprocurement.es/about/ontology/group04pp#subAcquisitionType
+:subAcquisitionType rdf:type owl:Class .
+
 
 ###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#AcquisitionMethod
 :AcquisitionMethod rdf:type owl:Class .
@@ -189,18 +229,8 @@
 :Department rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#Family
-:Family rdf:type owl:Class ;
-        rdfs:subClassOf :Segment .
-
-
 ###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#Item
 :Item rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#ItemClass
-:ItemClass rdf:type owl:Class ;
-           rdfs:subClassOf :Family .
 
 
 ###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#Purchase
@@ -209,16 +239,6 @@
 
 ###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#Segment
 :Segment rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#SubAcquisitionMethod
-:SubAcquisitionMethod rdf:type owl:Class ;
-                      rdfs:subClassOf :AcquisitionMethod .
-
-
-###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#SubAcquisitionType
-:SubAcquisitionType rdf:type owl:Class ;
-                    rdfs:subClassOf :AcquisitionType .
 
 
 ###  http://www.semanticweb.org/philipp/ontologies/2020/9/untitled-ontology-12#Supplier
